@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Weather JP App - Aplicación de clima en tiempo real. Consulta el pronóstico, temperatura, humedad y más. Desarrollado por JP Developer.">
+    <meta name="keywords" content="clima, tiempo, pronóstico, temperatura, aplicación clima, OpenWeather, Costa Rica">
+    <meta name="author" content="JP Developer">
+    <meta name="theme-color" content="#3498db">
+    <meta name="robots" content="index, follow">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Weather JP App - Consulta el Clima en Tiempo Real">
+    <meta property="og:description" content="La mejor aplicación para consultar el clima en cualquier parte del mundo. Diseño responsivo y datos en tiempo real.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tu-dominio.com">
+    <meta property="og:image" content="https://tu-dominio.com/assets/jpdev.png">
+    <!-- Favicon -->
+    <title>Weather JP App - Consulta el Clima en Tiempo Real</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Iconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header con Toggle Dark/Light -->
+      <header class="header">
+        <div class="header-content">
+          <div class="logo-title">
+            <img src="assets/jpdev.jpeg" alt="JP Dev Logo" class="brand-logo" width="115" height="100">
+            <h1>
+              <i class="fas fa-cloud-sun"></i> App de Clima by JP
+            </h1>
+            <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- Botón Flotante WhatsApp (z-index: 998 para estar por encima de todo excepto modales) -->
+      <a href="https://walink.co/b4a464" class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <!-- Sección de Búsqueda y Filtros -->
+      <section class="search-section">
+        <div class="search-container">
+          <input type="text" id="cityInput" placeholder="Busca una ciudad... (ej: San José, Costa Rica)" class="search-input" aria-label="Buscar ciudad">
+          <button class="search-btn" id="searchBtn" aria-label="Buscar">
+            <i class="fas fa-search"></i> Buscar </button>
+        </div>
+        <!-- Filtros -->
+        <div class="filters">
+          <select id="unitSelect" class="filter-select" aria-label="Unidad de temperatura">
+            <option value="metric">°C (Celsius)</option>
+            <option value="imperial">°F (Fahrenheit)</option>
+          </select>
+        </div>
+      </section>
+      <!-- Contenedor Principal de Clima -->
+      <main class="weather-container">
+        <!-- Loading State -->
+        <div class="loading" id="loading">
+          <i class="fas fa-spinner"></i>
+          <p>Cargando clima...</p>
+        </div>
+        <!-- Error State -->
+        <div class="error" id="error"></div>
+        <!-- Clima Actual -->
+        <section class="current-weather" id="currentWeather">
+          <!-- Se rellena con JavaScript -->
+        </section>
+        <!-- Pronóstico 5 días -->
+        <section class="forecast-section" id="forecastSection">
+          <h2>Pronóstico de 5 Días</h2>
+          <div class="forecast-container" id="forecastContainer">
+            <!-- Se rellena con JavaScript -->
+          </div>
+        </section>
+      </main>
+      <!-- Footer -->
+      <footer class="footer">
+        <p>© 2025 Weather JP App | Datos proporcionados por <a href="https://openweathermap.org/" target="_blank">OpenWeather</a>
+        </p>
+        <p class="credits">Desarrollado por <strong>JP Developer</strong> | <a href="https://walink.co/b4a464" target="_blank">Contáctame para desarrollo web</a>
+        </p>
+      </footer>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
